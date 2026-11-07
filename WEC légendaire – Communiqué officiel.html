@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>WEC légendaire – Communiqué officiel</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap">
+<style>
+:root{
+  --blue:#2230e8; --pink:#ff3d8b; --butter:#ffe14d; --paper:#fff4e6; --ink:#160a2b;
+  --display:"Bowlby One","Arial Black",Impact,sans-serif;
+  --body:"Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",sans-serif;
+  box-sizing:border-box; color-scheme:light;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:inherit}
+body{
+  margin:0; font-family:var(--body); color:var(--ink); line-height:1.5; font-size:1.05rem;
+  background-color:var(--blue);
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(255,61,139,.55) 2px, transparent 2.5px),
+    radial-gradient(circle at 12px 12px, rgba(255,225,77,.28) 1.5px, transparent 2px),
+    radial-gradient(120% 70% at 85% 0%, #5a3cff 0%, transparent 60%),
+    radial-gradient(90% 60% at 0% 100%, #ff3d8b55 0%, transparent 60%);
+  background-size:24px 24px,24px 24px,auto,auto;
+  background-attachment:fixed;
+}
+.wrap{max-width:720px;margin:0 auto;padding:28px 18px 64px}
+
+/* Hero */
+.hero{color:var(--paper);padding:18px 0 8px}
+.tag{display:inline-block;background:var(--butter);color:var(--ink);font-weight:800;padding:6px 14px;border:3px solid var(--ink);transform:rotate(-3deg);box-shadow:4px 4px 0 var(--ink)}
+h1{font-family:var(--display);font-weight:400;font-size:clamp(2.6rem,11vw,5.2rem);line-height:.95;margin:22px 0 14px;letter-spacing:-.01em;
+  color:var(--paper);text-shadow:4px 4px 0 var(--pink),-3px -3px 0 #00e5ff}
+.lead{font-size:1.2rem;max-width:34em;margin:0}
+.lead b{background:var(--ink);padding:0 .3em}
+
+/* Bandeau : le moment mémorable */
+.ticker{margin:30px -18px 34px;background:var(--butter);color:var(--ink);border-block:4px solid var(--ink);transform:rotate(-1.6deg);overflow:hidden;white-space:nowrap}
+.ticker div{display:inline-block;padding:10px 0;font-family:var(--display);font-size:1.25rem;animation:run 22s linear infinite}
+.ticker span{margin:0 18px}
+@keyframes run{to{transform:translateX(-50%)}}
+
+/* Tickets */
+.ticket{display:grid;grid-template-columns:96px 1fr;background:var(--paper);border:4px solid var(--ink);box-shadow:8px 8px 0 var(--ink);margin:0 0 34px;position:relative}
+.ticket:nth-of-type(odd){transform:rotate(-.8deg)}
+.ticket:nth-of-type(even){transform:rotate(.8deg)}
+.stub{display:flex;align-items:center;justify-content:center;font-size:2.6rem;border-right:4px dashed var(--ink);background:var(--c,var(--pink))}
+.stub::before,.stub::after{content:"";position:absolute;left:78px;width:36px;height:36px;border-radius:50%;background:var(--blue);border:4px solid var(--ink)}
+.stub::before{top:-22px}.stub::after{bottom:-22px}
+.body{padding:20px 22px 22px}
+h2{font-family:var(--display);font-weight:400;font-size:clamp(1.3rem,5vw,1.7rem);line-height:1.1;margin:0 0 4px}
+.sub{display:inline-block;margin:0 0 12px;font-weight:800;background:var(--ink);color:var(--paper);padding:2px 10px;font-size:.95rem}
+.body p{margin:0 0 .7em;max-width:34em}
+.note{margin:14px 0 0;padding:10px 14px;background:var(--butter);border:3px solid var(--ink);font-weight:600}
+.cake{display:inline-block;margin-top:6px;font-weight:800;color:var(--pink)}
+
+/* Le reste */
+.more{background:var(--ink);color:var(--paper);padding:24px 22px;border:4px solid var(--paper);box-shadow:8px 8px 0 var(--pink);margin:0 0 34px}
+.more h2{color:var(--butter)}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0}
+.chips span{border:3px solid var(--paper);padding:4px 14px;font-weight:800;border-radius:99px}
+.chips span:nth-child(3n+1){background:var(--pink);color:var(--ink);border-color:var(--pink)}
+.chips span:nth-child(3n+2){background:var(--butter);color:var(--ink);border-color:var(--butter)}
+
+/* Pied */
+.last{color:var(--paper);font-size:1.15rem}
+.last strong{font-family:var(--display);font-weight:400;color:var(--butter)}
+.sign{margin-top:26px;display:flex;gap:18px;align-items:center;color:var(--paper)}
+.stamp{flex:none;width:110px;height:110px;border:4px solid var(--pink);border-radius:50%;display:grid;place-items:center;text-align:center;font-family:var(--display);color:var(--pink);font-size:.8rem;line-height:1.1;transform:rotate(-14deg);background:rgba(22,10,43,.35)}
+.sign p{margin:0;font-size:.95rem}
+
+@media (max-width:480px){
+  .ticket{grid-template-columns:64px 1fr}
+  .stub{font-size:1.9rem}
+  .stub::before,.stub::after{left:46px}
+  .body{padding:16px}
+}
+@media (prefers-reduced-motion:reduce){.ticker div{animation:none}}
+a:focus-visible,button:focus-visible{outline:3px solid var(--butter);outline-offset:3px}
+</style>
+</head>
+<body>
+<main class="wrap">
+
+<header class="hero">
+  <span class="tag">🚨 Communiqué officiel</span>
+  <h1>Préparez-vous pour un WEC légendaire</h1>
+  <p class="lead">Chers participants, l’heure approche… il est temps de se préparer psychologiquement (et physiquement) à un week-end absolument <b>MÉ-MO-RABLE</b>. 🫡</p>
+</header>
+
+<div class="ticker" aria-hidden="true"><div>
+  <span>Fous rires</span>✦<span>Dossiers</span>✦<span>Révélations</span>✦<span>Débats douteux</span>✦<span>Mauvaise foi</span>✦
+  <span>Fous rires</span>✦<span>Dossiers</span>✦<span>Révélations</span>✦<span>Débats douteux</span>✦<span>Mauvaise foi</span>✦
+  <span>Fous rires</span>✦<span>Dossiers</span>✦<span>Révélations</span>✦<span>Débats douteux</span>✦<span>Mauvaise foi</span>✦
+  <span>Fous rires</span>✦<span>Dossiers</span>✦<span>Révélations</span>✦<span>Débats douteux</span>✦<span>Mauvaise foi</span>✦
+</div></div>
+
+<section class="ticket" style="--c:var(--pink)">
+  <div class="stub">🎭</div>
+  <div class="body">
+    <h2>Soirée déguisée</h2>
+    <span class="sub">« Erreur de soirée »</span>
+    <p>Le concept est simple : vous vous êtes complètement trompés de soirée ! Vous pensiez vous rendre à un événement, mais vous débarquez au mauvais endroit.</p>
+    <p>Mariage, enterrement, soirée échangiste, Festival de Cannes, Koh-Lanta, soirée pyjama… <b>TOUT EST PERMIS !</b></p>
+    <p>L’objectif ? Jouer le jeu à fond, faire preuve d’originalité et arriver avec un déguisement qui fera regretter aux autres de ne pas avoir eu la même idée.</p>
+    <div class="note">👉 Prévoyez votre tenue à l’avance. L’improvisation de dernière minute ne sera pas une excuse recevable.</div>
+  </div>
+</section>
+
+<section class="ticket" style="--c:var(--butter)">
+  <div class="stub">🍰</div>
+  <div class="body">
+    <h2>Hear me out</h2>
+    <span class="sub">Préparez vos crushs les plus inavouables</span>
+    <p>Réfléchissez à votre « Hear me out » le plus improbable : une célébrité, un personnage fictif, une personne ou même quelque chose d’inexplicable qui vous attire secrètement.</p>
+    <p>Un gâteau sera mis à disposition et chacun pourra y ajouter son choix au fil de l’après-midi. Il sera dévoilé pendant la soirée.</p>
+    <div class="note">Préparez votre proposition… et surtout vos arguments pour assumer vos goûts douteux.</div>
+  </div>
+</section>
+
+<section class="ticket" style="--c:#ff7a3d">
+  <div class="stub">🚩</div>
+  <div class="body">
+    <h2>Hear me out 2</h2>
+    <span class="sub">Défendez l’indéfendable</span>
+    <p>On change de registre : chacun choisit <b>UN RED FLAG</b> et tente de convaincre tout le monde que, finalement, ce n’est pas si grave.</p>
+    <p>Mauvaise foi, éloquence et arguments douteux seront fortement encouragés.</p>
+    <div class="note">👉 Réfléchissez dès maintenant à votre red flag. Plus il est scandaleux, plus le débat sera intéressant !</div>
+  </div>
+</section>
+
+<section class="ticket" style="--c:#7ae0ff">
+  <div class="stub">🔑</div>
+  <div class="body">
+    <h2>Secret Story</h2>
+    <span class="sub">Votre secret vous attend</span>
+    <p>Pour ceux qui n’y ont pas encore réfléchi : préparez votre secret ! Petit rappel, il doit <b>obligatoirement vous concerner directement</b>.</p>
+    <div class="note">On veut du croustillant, du personnel et de l’inattendu. À vous de jouer !</div>
+  </div>
+</section>
+
+<section class="more">
+  <h2>🏆 Et pour le reste ?</h2>
+  <div class="chips">
+    <span>Cache-cache géant</span><span>Beer Pong</span><span>Jeux de société</span><span>Just Dance</span><span>Twister</span><span>Action ou Vérité</span><span>Loup-Garou</span><span>…et d’autres surprises</span>
+  </div>
+  <p style="margin:0">Bref, vous n’aurez pas vraiment le temps de vous ennuyer !</p>
+</section>
+
+<p class="last"><strong>Dernière consigne :</strong> venez avec votre bonne humeur, votre second degré, votre esprit de compétition et surtout votre capacité à assumer vos dossiers. On compte sur vous pour jouer le jeu à fond.</p>
+
+<footer class="sign">
+  <div class="stamp">Décline<br>toute<br>responsabilité</div>
+  <p>Bien cordialement,<br>Votre responsable événementiel, qui décline toute responsabilité en cas de révélations compromettantes. 💋</p>
+</footer>
+
+</main>
+</body>
+</html>
